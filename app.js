@@ -10,7 +10,9 @@ app.get("/", (request, response) => {
     const day = date.getDate();
 
     const result = addDays(new Date(year, month, day), 100);
-    const finalResult = '${result.getDate()}/${result.getMonth() + 1}/${result.getFullYear()}';
+    const finalResult = `${result.getDate()}/${
+       result.getMonth() + 1
+    }/${result.getFullYear()}`;
 
     response.send(finalResult);
 });
